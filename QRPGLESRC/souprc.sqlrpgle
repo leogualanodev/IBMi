@@ -4,6 +4,9 @@ option(*srcstmt) dftactgrp(*no) optimize(*none)
 actgrp(*caller) datfmt(*iso) timfmt(*iso) alloc(*stgmdl)
 stgmdl(*inherit) thread(*serialize);
 
+
+// ceci est un commentaire
+
 // *****************************************************************
 // Programme : SOUPRC
 // FORMATION-  SOUS-FICHIER SEMI DYNAMIQUE EN SQL FULL FREE AVEC PROCÉDURE
