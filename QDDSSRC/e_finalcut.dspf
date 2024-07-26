@@ -1,0 +1,210 @@
+     A*%%TS  SD  20240111  120742  LEO2        REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03)
+     A                                      CF05(05)
+     A                                      CF06(06)
+     A                                      CF08(08)
+     A                                      HELP
+     A                                      ALTHELP(CA01)
+     A                                      HLPTITLE('Aide Programe')
+     A          R SFL1                      SFL
+     A*%%TS  SD  20240111  102516  LEO2        REL-V7R4M0  5770-WDS
+     A            OPT            1A  I  9  2
+     A            E_DATEF   R        O  9 22REFFLD(SESSIONS/DATE_FIN GUALANO/SE-
+     A                                      SSIONS)
+     A                                      DATFMT(*ISO)
+     A            E_NOM     R   10   O  9 33REFFLD(SESSIONS/NOM GUALANO/SESSION-
+     A                                      S)
+     A            E_PRENOM  R   10   O  9 44REFFLD(SESSIONS/PRENOM GUALANO/SESS-
+     A                                      IONS)
+     A            E_SOCIETE R   10   O  9 55REFFLD(SESSIONS/SOCIETE GUALANO/SES-
+     A                                      SIONS)
+     A            E_ETAT    R    1   O  9 67REFFLD(SESSIONS/ETAT GUALANO/SESSIO-
+     A                                      NS)
+     A            E_TYPE    R    1   O  9 69REFFLD(SESSIONS/TYPE GUALANO/SESSIO-
+     A                                      NS)
+     A            E_FORM    R   10   O  9 71REFFLD(SESSIONS/FORMATEUR GUALANO/S-
+     A                                      ESSIONS)
+     A            E_CODEF        5A  O  9 16
+     A            E_DATED   R        O  9  5REFFLD(SESSIONS/DATE_DEBUT GUALANO/-
+     A                                      SESSIONS)
+     A          R CTL1                      SFLCTL(SFL1)
+     A*%%TS  SD  20240111  101623  LEO2        REL-V7R4M0  5770-WDS
+     A                                      SFLSIZ(0011)
+     A                                      SFLPAG(0010)
+     A                                      OVERLAY
+     A  50                                  SFLDSP
+     A  51                                  SFLDSPCTL
+     A  52                                  SFLCLR
+     A  53                                  SFLEND(*MORE)
+     A          H                           HLPPNLGRP(GENERAL HELPFINAL)
+     A                                      HLPARA(01 001 02 080)
+     A          H                           HLPPNLGRP(FILTRE HELPFINAL)
+     A                                      HLPARA(04 002 04 036)
+     A          H                           HLPPNLGRP(FONCTIONS HELPFINAL)
+     A                                      HLPARA(23 001 23 080)
+     A          H                           HLPPNLGRP(SF HELPFINAL)
+     A                                      HLPARA(08 001 19 080)
+     A                                  1  2SYSNAME
+     A                                  2  2USER
+     A                                  1 30'Gestion des formations'
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  2 72TIME
+     A                                  4  2'Afficher à partir de :'
+     A            FILTRE        10A  I  4 27
+     A                                  5  2'Indiquez vos options, puis appuyer-
+     A                                       sur ENTREE.'
+     A                                      COLOR(BLU)
+     A                                  6  4'2=Modifier'
+     A                                      COLOR(BLU)
+     A                                  6 17'4=Supprimer'
+     A                                      COLOR(BLU)
+     A                                  6 31'5=Afficher'
+     A                                      COLOR(BLU)
+     A                                  8  1'opt'
+     A                                      COLOR(WHT)
+     A                                  8  5'Date debut'
+     A                                      COLOR(WHT)
+     A                                  8 22'Date fin'
+     A                                      COLOR(WHT)
+     A                                  8 33'Nom'
+     A                                      COLOR(WHT)
+     A                                  8 44'Prénom'
+     A                                      COLOR(WHT)
+     A                                  8 55'Société'
+     A                                      COLOR(WHT)
+     A                                  8 67'E'
+     A                                      COLOR(WHT)
+     A                                  8 69'T'
+     A                                      COLOR(WHT)
+     A                                  8 71'Formateur'
+     A                                      COLOR(WHT)
+     A            MSG           25A  O  4 41COLOR(WHT)
+     A                                  8 16'CodeF'
+     A                                      COLOR(WHT)
+     A          R BAS
+     A*%%TS  SD  20240109  160405  LEO2        REL-V7R4M0  5770-WDS
+     A                                      OVERLAY
+     A                                 23  2'F1=Aides'
+     A                                      COLOR(BLU)
+     A                                 23 13'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 39'F6=Créer'
+     A                                      COLOR(BLU)
+     A                                 23 50'F8=Imprimer'
+     A                                      COLOR(BLU)
+     A                                 23 23'F5=Actualiser'
+     A                                      COLOR(BLU)
+     A            MSG_VALID     50   O 20  2COLOR(WHT)
+     A          R FMT1
+     A*%%TS  SD  20240111  120742  LEO2        REL-V7R4M0  5770-WDS
+     A                                      CF12(12)
+     A                                      CF07(07)
+     A                                      CF23(23)
+     A          H                           HLPPNLGRP(GENERAL HELPFINAL)
+     A                                      HLPARA(01 001 02 080)
+     A          H                           HLPPNLGRP(FONCTIONS HELPFINAL)
+     A                                      HLPARA(23 001 23 080)
+     A          H                           HLPPNLGRP(ECRAN HELPFINAL)
+     A                                      HLPARA(03 001 22 080)
+     A                                  1 30'Gestion des formations'
+     A                                      COLOR(WHT)
+     A                                  1  2SYSNAME
+     A                                  2  2USER
+     A                                  1 73TIME
+     A                                  2 73DATE
+     A                                      EDTCDE(Y)
+     A            NBRCODE        3S 0H
+     A            NBRNOM         3S 0H
+     A            NBRSOC         3S 0H
+     A            IDSESS         3S 0H
+     A            NBRJOURS       3S 0H
+     A            TITRE         15A  O  3 33COLOR(WHT)
+     A            FONCTION      15A  O 23 30COLOR(BLU)
+     A                                  5  8'Code Formation :'
+     A                                  6  9'Date de début :'
+     A                                  7 11'Date de fin :'
+     A  64                                  DSPATR(ND)
+     A                                  8 19'Nom :'
+     A                                  9 16'Prénom :'
+     A                                 10 15'Société :'
+     A                                 11 18'État :'
+     A                                 12 18'Type :'
+     A                                 13 13'Formateur :'
+     A                                 14  9'Adresse Email :'
+     A  61                                  DSPATR(ND)
+     A                                 15 13'Téléphone :'
+     A  61                                  DSPATR(ND)
+     A                                 16 15'Libellé :'
+     A  61                                  DSPATR(ND)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A            E1_CODEF  R        B  5 25REFFLD(SESSIONS/CODE_F GUALANO/SESS-
+     A                                      IONS)
+     A  60                                  DSPATR(PR)
+     A            E1_DATED  R        B  6 25REFFLD(SESSIONS/DATE_DEBUT GUALANO/-
+     A                                      SESSIONS)
+     A                                      DATFMT(*ISO)
+     A  60                                  DSPATR(PR)
+     A            E1_DATEF  R        B  7 25REFFLD(SESSIONS/DATE_FIN GUALANO/SE-
+     A                                      SSIONS)
+     A                                      DATFMT(*ISO)
+     A  62                                  DSPATR(PR)
+     A  64                                  DSPATR(ND)
+     A            E1_NOM    R        B  8 25REFFLD(SESSIONS/NOM GUALANO/SESSION-
+     A                                      S)
+     A  60                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            E1_PRENOM R        B  9 25REFFLD(SESSIONS/PRENOM GUALANO/SESS-
+     A                                      IONS)
+     A  60                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            E1_SOCIETER        B 10 25REFFLD(SESSIONS/SOCIETE GUALANO/SES-
+     A                                      SIONS)
+     A  60                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            E1_ETAT   R        B 11 25REFFLD(SESSIONS/ETAT GUALANO/SESSIO-
+     A                                      NS)
+     A  60                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            E1_TYPE   R        B 12 25REFFLD(SESSIONS/TYPE GUALANO/SESSIO-
+     A                                      NS)
+     A  60                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            E1_FORM   R        B 13 25REFFLD(SESSIONS/FORMATEUR GUALANO/S-
+     A                                      ESSIONS)
+     A  60                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            E1_MAIL       50A  B 14 25
+     A  60                                  DSPATR(PR)
+     A  61                                  DSPATR(ND)
+     A            E1_TEL        12A  B 15 25
+     A  60                                  DSPATR(PR)
+     A  61                                  DSPATR(ND)
+     A            E1_LIBELLE    50A  B 16 25
+     A  60                                  DSPATR(PR)
+     A  61                                  DSPATR(ND)
+     A            E1_DETAIL    100A  B 17 25
+     A  60                                  DSPATR(PR)
+     A  61                                  DSPATR(ND)
+     A                                 19  9'Nombres jours :'
+     A  61                                  DSPATR(ND)
+     A            E1_JOUR        4S 0B 19 25
+     A  60                                  DSPATR(PR)
+     A  61                                  DSPATR(ND)
+     A                                 17 15'Détails :'
+     A  61                                  DSPATR(ND)
+     A                                 20 12'Pré-requis :'
+     A  61                                  DSPATR(ND)
+     A            E1_REQUIS     50A  B 20 25
+     A  60                                  DSPATR(PR)
+     A  61                                  DSPATR(ND)
+     A                                 21  2'Message erreur :'
+     A                                      COLOR(RED)
+     A  63                                  DSPATR(ND)
+     A            MSG_ERR       50A  O 21 20COLOR(RED)
+     A                                 23 13'F12=Précédent'
+     A                                      COLOR(BLU)

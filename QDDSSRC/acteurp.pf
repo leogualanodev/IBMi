@@ -1,0 +1,9 @@
+                                            UNIQUE
+                                            REF(REPERT)
+                R ACTF
+                  CODACT    R
+                  NOMACT    R
+                  NATACT    R
+                  PREACT    R
+                K CODACT
+

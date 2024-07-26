@@ -1,0 +1,6 @@
+             PGM        PARM(&ID)
+             DCL        VAR(&ID) TYPE(*CHAR) LEN(3)
+             RUNSQL     SQL('delete from gualano.film where id = ' +
+                          *CAT       &ID ) COMMIT(*NONE)
+             SNDPGMMSG  MSG('film supprimé')
+             ENDPGM

@@ -1,0 +1,3 @@
+                R FRTPRDT                   PFILE(PRDT)
+                K P_U
+                S P_U                       COMP(GT 50)

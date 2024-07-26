@@ -1,0 +1,27 @@
+     A*%%TS  SD  20231112  115312  LEO2        REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03)
+     A          R FMT1
+     A*%%TS  SD  20231106  131857  LEO2        REL-V7R4M0  5770-WDS
+     A                                  1 35'mon ecran 1'
+     A                                 10 13'saisie:'
+     A                                      COLOR(BLU)
+     A                                 19 36'f3=quiter '
+     A                                      COLOR(BLU)
+     A                                  2 62DATE
+     A                                      EDTCDE(Y)
+     A                                  6 10'1.  wrksplf'
+     A                                  7 10'2.  strpdm'
+     A                                  8 10'3.  quitter'
+     A                                      COLOR(RED)
+     A                                  1 62TIME
+     A                                  1 10SYSNAME
+     A                                  2 10USER
+     A            SAISIE         1   B 10 21
+     A                                 12 11'zone de 10 en both +b(10)'
+     A            B10           10   B 12 38
+     A                                 13 11'zone de 10 en output'
+     A            O10           10   O 13 38
+     A                                 14 11'zone de 10 en input'
+     A            I10           10   I 14 38

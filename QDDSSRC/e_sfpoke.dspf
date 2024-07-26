@@ -1,0 +1,139 @@
+     A*%%TS  SD  20231220  143755  LEO2        REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CA03(03)
+     A                                      CA12(12)
+     A                                      HELP
+     A                                      ALTHELP(CA01)
+     A                                      HLPTITLE('Aide Programme')
+     A          R SF1                       SFL
+     A*%%TS  SD  20231220  101552  LEO2        REL-V7R4M0  5770-WDS
+     A            OPT            1A  B  9  4
+     A            ENOM          25A  O  9 16
+     A            ETYPE1        15A  O  9 44
+     A            ETYPE2        15A  O  9 62
+     A            EPOKENBR       3  0O  9  9
+     A          R CTL1                      SFLCTL(SF1)
+     A*%%TS  SD  20231220  143356  LEO2        REL-V7R4M0  5770-WDS
+     A                                      CF06(06)
+     A                                      CF05(05)
+     A                                      CF10(10)
+     A                                      OVERLAY
+     A  50                                  SFLDSP
+     A  51                                  SFLDSPCTL
+     A  52                                  SFLCLR
+     A  53                                  SFLEND(*MORE)
+     A                                      SFLSIZ(0008)
+     A                                      SFLPAG(0007)
+     A          H                           HLPPNLGRP(GENERAL POKEHLP)
+     A                                      HLPARA(01 001 02 080)
+     A          H                           HLPPNLGRP(FONCTIONS POKEHLP)
+     A                                      HLPARA(21 001 24 080)
+     A          H                           HLPPNLGRP(SF POKEHLP)
+     A                                      HLPARA(08 001 15 080)
+     A                                  1 28'Gestion Mon équipe pokemon'
+     A                                      COLOR(WHT)
+     A                                  1  2SYSNAME
+     A                                  2  2USER
+     A                                  1 72TIME
+     A                                  2 72DATE
+     A                                      EDTCDE(Y)
+     A                                  4  2'Indiquez vos options et appuyer su-
+     A                                      r ENTREE'
+     A                                      COLOR(BLU)
+     A                                  5  2'4=supprimer'
+     A                                      COLOR(BLU)
+     A                                  5 16'5=afficher'
+     A                                      COLOR(BLU)
+     A                                  8  3'opt'
+     A                                      COLOR(WHT)
+     A                                  8 16'Nom pokemon'
+     A                                      COLOR(WHT)
+     A                                  8 44'Pokemon type1'
+     A                                      COLOR(WHT)
+     A                                  8 62'Pokemon type2'
+     A                                      COLOR(WHT)
+     A                                  8  9'Pnbr'
+     A                                      COLOR(WHT)
+     A            FILTRE        10A  I  6 66
+     A                                  6 42'Afficher à partir de :'
+     A          R BAS
+     A*%%TS  SD  20231220  143755  LEO2        REL-V7R4M0  5770-WDS
+     A                                 22  2'f3=quitter'
+     A                                      COLOR(BLU)
+     A                                 22 31'f6=capturer'
+     A                                      COLOR(BLU)
+     A                                 20  3'Message........:'
+     A            VALID         50A  O 20 21
+     A                                 22 15'f5=actualiser'
+     A                                      COLOR(BLU)
+     A                                 22 46'f10=liste pokemon'
+     A                                      COLOR(BLU)
+     A          R FMT1
+     A*%%TS  SD  20231220  110342  LEO2        REL-V7R4M0  5770-WDS
+     A                                  1 28'Gestion Mon équipe pokemon'
+     A                                      COLOR(WHT)
+     A                                  1  4SYSNAME
+     A                                  2  4USER
+     A                                  1 72TIME
+     A                                  2 72DATE
+     A                                      EDTCDE(Y)
+     A            TITRE         15A  O  4  4COLOR(BLU)
+     A                                  6  5'pokedex Number.:'
+     A                                  7  5'pokemon Name...:'
+     A                                  8  5'pokemon HP.....:'
+     A                                  9  5'pokemon Attack.:'
+     A                                 10  5'pokemon'
+     A                                 10 13'Defense:'
+     A                                 11  5'special attack.:'
+     A                                 12  5'special defense:'
+     A                                 13  5'pokemon speed..:'
+     A                                 14  5'pokemon type1..:'
+     A                                 15  5'pokemon type2..:'
+     A                                 22  3'f3=quitter'
+     A                                      COLOR(BLU)
+     A            E2POKENBR      3S 0B  6 23
+     A  61                                  DSPATR(PR)
+     A            E2NOM         20A  B  7 23
+     A  60                                  DSPATR(PR)
+     A            E2HP           3S 0B  8 23
+     A  60                                  DSPATR(PR)
+     A            E2ATTACK       3S 0B  9 23
+     A  60                                  DSPATR(PR)
+     A            E2DEFENSE      3S 0B 10 23
+     A  60                                  DSPATR(PR)
+     A            E2SPATT        3S 0B 11 23
+     A  60                                  DSPATR(PR)
+     A            E2SPDEF        3S 0B 12 23
+     A  60                                  DSPATR(PR)
+     A            E2SPEED        3S 0B 13 23
+     A  60                                  DSPATR(PR)
+     A            E2TYPE1       20A  B 14 23
+     A  60                                  DSPATR(PR)
+     A            E2TYPE2       20A  B 15 23
+     A  60                                  DSPATR(PR)
+     A                                 22 17'f12=précédent'
+     A                                      COLOR(BLU)
+     A          R W1
+     A*%%TS  SD  20231220  111846  LEO2        REL-V7R4M0  5770-WDS
+     A                                      WINDOW(5 10 10 40)
+     A                                  1  5'Supréssion pokemon de mon équipe'
+     A                                      COLOR(WHT)
+     A                                  4  5'Pokemon :'
+     A            WNOM          20A  O  4 17
+     A                                  8 14'ENTREE=valider'
+     A                                      COLOR(BLU)
+     A                                  9 12'f12=annuler/suivant'
+     A                                      COLOR(BLU)
+     A          R W2
+     A*%%TS  SD  20231220  113516  LEO2        REL-V7R4M0  5770-WDS
+     A                                      WINDOW(5 10 10 40)
+     A                                      WDWBORDER((*COLOR GRN))
+     A                                  1 18'Capture'
+     A                                      COLOR(WHT)
+     A                                  8 14'ENTREE=valider'
+     A                                      COLOR(BLU)
+     A                                  9 16'f12=annuler'
+     A                                      COLOR(BLU)
+     A                                  3  6'Voulez vous capturer un pokemon'
+     A                                  4 13'aléatoirement ? '

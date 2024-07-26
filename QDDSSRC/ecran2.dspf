@@ -1,0 +1,27 @@
+     A*%%TS  SD  20231107  101216  LEO2        REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03)
+     A                                      CF06(06)
+     A          R FMT2
+     A*%%TS  SD  20231107  101216  LEO2        REL-V7R4M0  5770-WDS
+     A                                  1  2SYSNAME
+     A                                  1 32'calculette'
+     A                                      COLOR(RED)
+     A                                  1 59DATE
+     A                                      EDTCDE(Y)
+     A                                  2  2USER
+     A                                  2 59TIME
+     A                                  9 17'facteur 1'
+     A                                  9 36'facteur 2'
+     A                                  9 53'operateur'
+     A            FACT1          4Y 2B 11 17EDTCDE(N)
+     A            FACT2          4Y 2B 11 36EDTCDE(N)
+     A            OPE            1A  B 11 53
+     A                                 15 19'resultat'
+     A            RESULT         8Y 2O 15 31EDTCDE(N)
+     A                                 20 29'?3=quitter'
+     A                                      COLOR(BLU)
+     A                                 20 45'f6=raz'
+     A                                      COLOR(BLU)
+     A            MSGE          50   O 19 11

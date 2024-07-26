@@ -1,0 +1,10 @@
+                                            UNIQUE
+                                            REF(REPERT)
+                R K7F
+                  CODK7     R
+                  CODREA    R
+                  TITRE     R
+                  DUREE     R
+                  ANNEE     R
+                  GENRE     R
+                K CODK7

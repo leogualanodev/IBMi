@@ -1,0 +1,114 @@
+     A*%%TS  SD  20231201  144954  LEO2        REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03)
+     A          R SFL01                     SFL
+     A*%%TS  SD  20231130  165510  LEO2        REL-V7R4M0  5770-WDS
+     A            OPT            1A  B  8  6
+     A            ENOM          25   O  8 12
+     A            EHOUSE        15   O  8 38
+     A            EACTOR        15   O  8 56
+     A          R CTL01                     SFLCTL(SFL01)
+     A*%%TS  SD  20231201  133614  LEO2        REL-V7R4M0  5770-WDS
+     A                                      CF05(05)
+     A                                      CF06(06)
+     A                                      CF08(08)
+     A                                      OVERLAY
+     A  50                                  SFLDSP
+     A  51                                  SFLDSPCTL
+     A  52                                  SFLCLR
+     A  53                                  SFLEND(*MORE)
+     A                                      SFLSIZ(0011)
+     A                                      SFLPAG(0010)
+     A  70                                  SFLMSG('modification éffectué')
+     A  71                                  SFLMSG('suppression éffectué')
+     A  72                                  SFLMSG('creation effectué')
+     A  73                                  SFLMSG('impression envoyé dans les -
+     A                                      fichiers spool')
+     A                                  7  5'opt'
+     A                                      COLOR(WHT)
+     A                                  7 12'Nom'
+     A                                      COLOR(WHT)
+     A                                  7 38'maison'
+     A                                      COLOR(WHT)
+     A                                  7 56'acteur'
+     A                                      COLOR(WHT)
+     A                                  5  6'filtre de recherche maison:'
+     A                                      COLOR(WHT)
+     A            FILTRE        25A  B  5 35CHECK(LC)
+     A          R ENTETE
+     A*%%TS  SD  20231130  144849  LEO2        REL-V7R4M0  5770-WDS
+     A                                      OVERLAY
+     A                                  1  2USER
+     A                                  2  2SYSNAME
+     A                                  1 35'Harry Potter'
+     A                                      COLOR(WHT)
+     A                                  1 72TIME
+     A                                  2 72DATE
+     A                                      EDTCDE(Y)
+     A                                  4  5'2 = modifier'
+     A                                      COLOR(BLU)
+     A                                  4 23'4 = supprimer'
+     A                                      COLOR(BLU)
+     A                                  4 43'5 = afficher'
+     A                                      COLOR(BLU)
+     A          R BAS
+     A*%%TS  SD  20231130  145336  LEO2        REL-V7R4M0  5770-WDS
+     A                                      OVERLAY
+     A                                 21  8'f3 = quitter'
+     A                                      COLOR(BLU)
+     A                                 21 24'f6 = creation'
+     A                                      COLOR(BLU)
+     A                                 21 59'f8 = impression'
+     A                                      COLOR(BLU)
+     A                                 21 41'f5 = actualiser'
+     A                                      COLOR(BLU)
+     A          R FMT1
+     A*%%TS  SD  20231201  105721  LEO2        REL-V7R4M0  5770-WDS
+     A N61                                  CF22(22)
+     A N62                                  CF23(23)
+     A N63                                  CF21(21)
+     A                                      CF12(12)
+     A                                  1  2USER
+     A                                  2  2SYSNAME
+     A                                  1 35'Harry Potter'
+     A                                      COLOR(WHT)
+     A                                  1 71TIME
+     A                                  2 71DATE
+     A                                      EDTCDE(Y)
+     A                                 21 26'f3 = quitter'
+     A                                      COLOR(BLU)
+     A                                  8 24'NAME:'
+     A            E1NAME    R        B  8 31REFFLD(FMT/NAME GUALANO/STUDENT)
+     A  60                                  DSPATR(PR)
+     A                                  9 21'SPECIES:'
+     A            E1SPECIES R        B  9 31REFFLD(FMT/SPECIES GUALANO/STUDENT)
+     A  60                                  DSPATR(PR)
+     A                                 10 22'GENDER:'
+     A            E1GENDER  R        B 10 31REFFLD(FMT/GENDER GUALANO/STUDENT)
+     A  60                                  DSPATR(PR)
+     A                                 11 23'HOUSE:'
+     A            E1HOUSE   R        B 11 31REFFLD(FMT/HOUSE GUALANO/STUDENT)
+     A  60                                  DSPATR(PR)
+     A                                 12 23'ACTOR:'
+     A            E1ACTOR   R        B 12 31REFFLD(FMT/ACTOR GUALANO/STUDENT)
+     A  60                                  DSPATR(PR)
+     A                                 21  8'f12 = annuler'
+     A                                      COLOR(BLU)
+     A                                 21 45'f22 = update'
+     A                                      COLOR(BLU)
+     A  61                                  DSPATR(ND)
+     A                                 21 61'f23 = supprimer'
+     A                                      COLOR(BLU)
+     A  62                                  DSPATR(ND)
+     A                                 19  8'f21 = créer'
+     A                                      COLOR(BLU)
+     A  63                                  DSPATR(ND)
+     A          R WIN
+     A*%%TS  SD  20231201  144954  LEO2        REL-V7R4M0  5770-WDS
+     A                                      WINDOW(5 10 5 50)
+     A                                  1  9'veuillez confirmer la supression :'
+     A                                      COLOR(WHT)
+     A            VALID          3   B  4 16COLOR(RED)
+     A                                  4 28'(oui/non)'
+     A                                      COLOR(RED)

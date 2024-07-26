@@ -1,0 +1,7 @@
+                                            UNIQUE
+                R FRTCLI
+                  NUM_CLI        6S         COLHDG('NUMÉRO CLIENT')
+                  NOM           20A         COLHDG('NOM DU CLIENT')
+                  PRENOM        20A         COLHDG('PRENOM DU CLIENT')
+                  VILLE         50A         COLHDG('VILLE RESIDENCE')
+                K NUM_CLI

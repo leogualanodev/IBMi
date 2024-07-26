@@ -1,0 +1,60 @@
+:PNLGRP.
+:HELP NAME='GENERAL'.
+:XH3. Aide Gestion des formations.
+:P. Ce programme consiste à gérer les formations.
+:EHELP.
+:HELP NAME='FILTRE'.
+:XH3. Aide Afficher à partir de.
+:P. Afficher à partir de la date de début de formation.
+:P. Format de date : YYYY-MM-DD
+:EHELP.
+:HELP NAME='SF'.
+:XH3. Aide SOUS FICHIER.
+:P. Ce sous fichier représente la liste des formations triées par date de début.
+:PARML.
+:PT. Option 2
+:PD. Modifier une séssion de formation.
+:PT. Option 4
+:PD. Supprimer une séssion de formation.
+:PT. Option 5
+:PD. Affiche une séssion de formations ainsi que des informations relatives au
+candidat et à la formation
+:EPARML.
+:EHELP.
+:HELP NAME='ECRAN'.
+:XH3. Aide Afficher/Modifier/Supprimer.
+:P. Cet écran va permettre d'afficher, modifier et supprimer.
+:PARML.
+:PT. Code formation.
+:PD. Il doit être présnet dans la table catalogue.
+:PT. Date de début.
+:PD. Date de début de formation.
+:PT. Date de fin.
+:PD. Date de fin calculé par rapport à la date de début et du nombres de jours
+de formation.
+:PT. Nom/Prénom/Société.
+:PD. ils doivent être présent dans la table des participants.
+:PT. État
+:PD. 'Facturé' ou 'Non Facturé'.
+:PT. Type
+:PD. 'Présentiel' ou 'Distanciel'.
+:EPARML.
+:EHELP.
+:HELP NAME ='FONCTIONS'.
+:XH3. Les touches de fonctions..
+:PARML.
+:PT. F1=Aides
+:PD. Aides
+:PT. F3=quitter
+:PD. Quitte le programme
+:PT. F5=Actualiser
+:PD. Actualise le sous fichier formations.
+:PT. F6=Créer
+:PD. Créer une séssion de formation.
+:PT. F8=Imprimer
+:PD. Imprime la liste des formations à partir de la date du jour.
+:PT. F12=Précédent
+:PD. Permet de revenir sur le sous fichier.
+:EPARML.
+:EHELP.
+:EPNLGRP.

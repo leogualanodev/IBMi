@@ -1,0 +1,29 @@
+A               R TITRE
+A                                           SPACEB(001)
+A                                         50
+A                                           'LISTE ÉLÉVES HARRY POTTER'
+A                                           SPACEA(001)
+A               R COLONNE
+A                                           SPACEB(001)
+A                                          1
+A                                           'NOM'
+A                                         26
+A                                           'MAISON'
+A                                         52
+A                                           'ACTEUR'
+A                                         78
+A                                           'GENRE'
+A                                        104
+A                                           'ESPÈCE'
+A               R DETAILS
+A                                           SPACEB(001)
+A                 PNAME         25         1
+A                 PHOUSE        25        26
+A                 PACTOR        25        52
+A                 PGENDER       25        78
+A                 PSPECIES      25       104
+A               R EJECT
+A                                           SPACEB(002)
+A                                           SKIPA(001)
+A                                         65
+A                                           'À SUIVRE ... ->'

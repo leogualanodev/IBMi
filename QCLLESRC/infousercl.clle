@@ -1,0 +1,31 @@
+             PGM        PARM(&USERNAME)
+             DCLF       FILE(INFOUSER)
+             DCLF       FILE(QSYS/QADSPOBJ) OPNID(F)
+             DCL        VAR(&USERNAME) TYPE(*CHAR) LEN(10)
+             DSPOBJD    OBJ(*ALL/*ALL) OBJTYPE(*LIB) +
+                          OUTPUT(*OUTFILE) OUTFILE(QTEMP/DSPLIB)
+             OVRDBF     FILE(QADSPOBJ) TOFILE(QTEMP/DSPLIB)
+             RTVUSRPRF  USRPRF(&USERNAME) JOBD(&JOBD) MSGQ(&MSGQ) +
+                          CURLIB(&CURLIB) INLMNU(&INLMNU)
+             CHGVAR     VAR(&USER) VALUE(&USERNAME)
+ DSP:        SNDRCVF    RCDFMT(FMT1)
+             CHGVAR     VAR(&ERREUR) VALUE(' ')
+
+             IF         COND(&IN03 *EQ '1') THEN(GOTO CMDLBL(end))
+             IF         COND(&IN21 *EQ '1') THEN(CALL PGM(QUSCMDLN))
+             IF         COND(&IN50) THEN(do)
+ LIRE:       RCVF       OPNID(F)
+             MONMSG     MSGID(CPF0864) EXEC(do)
+            CHGVAR     VAR(&ERREUR) VALUE('bib do not exist')
+             CLOSE      OPNID(F)
+             GOTO       CMDLBL(FIN2)
+             enddo
+             IF         COND(&F_ODOBNM *EQ &CURLIB) THEN(do)
+             CHGUSRPRF  USRPRF(&USERNAME) CURLIB(&CURLIB)
+             CLOSE      OPNID(F)
+             GOTO       CMDLBL(FIN2)
+             ENDDO
+             GOTO       CMDLBL(LIRE)
+ fin2:       ENDDO
+             GOTO       CMDLBL(DSP)
+ END:        ENDPGM

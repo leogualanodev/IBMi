@@ -1,0 +1,115 @@
+     A*%%TS  SD  20231130  093702  LEO2        REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03)
+     A                                      CF05(05)
+     A          R SF01                      SFL
+     A*%%TS  SD  20231128  133010  LEO2        REL-V7R4M0  5770-WDS
+     A            OPT            1A  B  7  6
+     A            ID             9S 0H
+     A            NOMBR00001R        O  7 62REFFLD(JOUEURSNBA/NOMBR00001 GUALAN-
+     A                                      O/JOUEURSNBA)
+     A            EEQUIPE       25A  O  7 34
+     A            ENOM          20A  O  7 12
+     A          R CTL01                     SFLCTL(SF01)
+     A*%%TS  SD  20231130  093702  LEO2        REL-V7R4M0  5770-WDS
+     A                                      CF08(08)
+     A                                      OVERLAY
+     A  50                                  SFLDSP
+     A  51                                  SFLDSPCTL
+     A  52                                  SFLCLR
+     A  53                                  SFLEND(*MORE)
+     A                                      SFLSIZ(0011)
+     A                                      SFLPAG(0010)
+     A                                  6  5'opt'
+     A                                      COLOR(WHT)
+     A                                  6 12'nom'
+     A                                      COLOR(WHT)
+     A                                  6 62'nbr titre'
+     A                                      COLOR(WHT)
+     A                                  6 34'equipe'
+     A                                      COLOR(WHT)
+     A                                  5  6'filtre equipe :'
+     A                                      COLOR(BLU)
+     A            FILTRE        20A  B  5 24CHECK(LC)
+     A          R FMT1
+     A*%%TS  SD  20231128  110425  LEO2        REL-V7R4M0  5770-WDS
+     A                                      OVERLAY
+     A                                  1  2SYSNAME
+     A                                  2  2USER
+     A                                  1 35'joueurs nba'
+     A                                      COLOR(WHT)
+     A                                  1 73TIME
+     A                                  2 73DATE
+     A                                      EDTCDE(Y)
+     A                                  4  4'2 = editer'
+     A                                      COLOR(BLU)
+     A                                  4 20'3 = copier'
+     A                                      COLOR(BLU)
+     A                                  4 36'4 = supprimer'
+     A                                      COLOR(BLU)
+     A                                  4 54'5= afficher'
+     A                                      COLOR(BLU)
+     A          R FMT2
+     A*%%TS  SD  20231130  093702  LEO2        REL-V7R4M0  5770-WDS
+     A                                      OVERLAY
+     A                                 21 36'f3 = exit'
+     A                                      COLOR(BLU)
+     A                                 19 33'f5 = actualiser'
+     A                                      COLOR(BLU)
+     A                                 20 34'f8 = imprimer'
+     A                                      COLOR(BLU)
+     A          R FMT3
+     A*%%TS  SD  20231128  160812  LEO2        REL-V7R4M0  5770-WDS
+     A                                      CF23(23)
+     A                                      CF22(22)
+     A                                      OVERLAY
+     A                                  1  2SYSNAME
+     A                                  2  2USER
+     A                                  1 35'joueurs nba'
+     A                                      COLOR(WHT)
+     A                                  1 73TIME
+     A                                  2 73DATE
+     A                                      EDTCDE(Y)
+     A                                 20 35'f3 = quitter'
+     A                                      COLOR(BLU)
+     A                                  7  3'NOM:'
+     A                                      COLOR(WHT)
+     A            E3NOM     R        B  7 19REFFLD(JOUEURSNBA/NOM GUALANO/JOUEU-
+     A                                      RSNBA)
+     A  40                                  DSPATR(PR)
+     A                                  8  3'PRENOM:'
+     A                                      COLOR(WHT)
+     A            E3PRENOM  R        B  8 19REFFLD(JOUEURSNBA/PRENOM GUALANO/JO-
+     A                                      UEURSNBA)
+     A  40                                  DSPATR(PR)
+     A                                  9  3'EQUIPE:'
+     A                                      COLOR(WHT)
+     A            E3EQUIPE  R        B  9 19REFFLD(JOUEURSNBA/EQUIPE GUALANO/JO-
+     A                                      UEURSNBA)
+     A  40                                  DSPATR(PR)
+     A                                 10  3'NOMBRE_TITRES:'
+     A                                      COLOR(WHT)
+     A            E3NBRT    R        B 10 19REFFLD(JOUEURSNBA/NOMBR00001 GUALAN-
+     A                                      O/JOUEURSNBA)
+     A  40                                  DSPATR(PR)
+     A                                 11  3'AGE:'
+     A                                      COLOR(WHT)
+     A            E3AGE     R        B 11 19REFFLD(JOUEURSNBA/AGE GUALANO/JOUEU-
+     A                                      RSNBA)
+     A  40                                  DSPATR(PR)
+     A                                 12  3'TAILLE:'
+     A                                      COLOR(WHT)
+     A            E3TAILLE  R        B 12 19REFFLD(JOUEURSNBA/TAILLE GUALANO/JO-
+     A                                      UEURSNBA)
+     A  40                                  DSPATR(PR)
+     A                                  6  3'ID:'
+     A                                      COLOR(WHT)
+     A            E3ID      R        O  6 19REFFLD(JOUEURSNBA/ID GUALANO/JOUEUR-
+     A                                      SNBA)
+     A                                 21 33'f23 = supprimmer'
+     A                                      COLOR(BLU)
+     A N41                                  DSPATR(ND)
+     A                                 18 35'f22 = update'
+     A                                      COLOR(BLU)
+     A  42                                  DSPATR(ND)

@@ -1,0 +1,42 @@
+A               R TITRES
+A                                           SPACEB(001)
+A                                         60
+A                                           'Liste des formations'
+A                                           SPACEA(001)
+A               R COLONNE
+A                                           SPACEB(001)
+A                                           SPACEA(001)
+A                                         05
+A                                           'Date Début'
+A                                         16
+A                                           'Date Fin'
+A                                         26
+A                                           'Code '
+A                                         32
+A                                           'Nom'
+A                                         47
+A                                           'Prénom'
+A                                         62
+A                                           'Société'
+A                                         83
+A                                           'Etat'
+A                                        100
+A                                           'Type'
+A                                        117
+A                                           'Formateur'
+A               R DETAILS
+A                                           SPACEB(001)
+A                 PDATED        10        05
+A                 PDATEF        10        16
+A                 PCODEF         5        26
+A                 PNOM          15        32
+A                 PPRENOM       15        47
+A                 PSOCIETE      20        62
+A                 PETAT         11        83
+A                 PTYPE         11       100
+A                 PFORM         15       117
+A               R EJECT
+A                                           SPACEB(001)
+A                                           SKIPA(001)
+A                                        110
+A                                           'A suivre..'

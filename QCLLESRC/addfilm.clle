@@ -1,0 +1,40 @@
+             PGM
+             DCLF       FILE(EFILM)
+             DCL        VAR(&REQ) TYPE(*CHAR) LEN(1000)
+ BOUCLE:     SNDRCVF    RCDFMT(FMT1)
+             IF         COND(&IN03 *EQ '1') THEN(GOTO CMDLBL(FIN))
+             IF         COND(&IN04 *EQ '1') THEN(do)
+ BOUCLE1:    SNDRCVF    RCDFMT(FMT2)
+             IF         COND(&IDFILM *EQ 0) THEN(DO)
+             CHGVAR     VAR(&SUPPR) VALUE('veuillez rentrer un +
+                          identifiant')
+             GOTO       CMDLBL(BOUCLE1)
+             ENDDO
+             RUNSQL     SQL('delete from gualano.film where id = ' +
+                          *CAT %CHAR(&IDFILM)) COMMIT(*NONE)
+             CHGVAR     VAR(&RESULT) VALUE('film supprimé')
+             ENDDO
+             IF         COND(&NAME *EQ ' ') THEN(DO)
+             CHGVAR     VAR(&RESULT) VALUE('veuillez renseignez un +
+                          nom de film')
+             GOTO       CMDLBL(BOUCLE)
+             ENDDO
+             IF         COND(&DATE *EQ ' ') THEN(DO)
+             CHGVAR     VAR(&RESULT) VALUE('veuillez renseignez une +
+                          date')
+             GOTO       CMDLBL(BOUCLE)
+             ENDDO
+             IF         COND(&NOTE *EQ  0 ) THEN(do)
+             CHGVAR     VAR(&RESULT) VALUE('veuillez renseignez une +
+                          note')
+             GOTO       CMDLBL(BOUCLE)
+             ENDDO
+
+             GOTO       CMDLBL(SQL)
+ SQL:        CHGVAR     VAR(&REQ) VALUE('insert into gualano/film +
+                          (name , date ,note) values (''' *TCAT +
+                          &NAME *CAT ''',''' *CAT &DATE *TCAT +
+                          ''', ' *CAT %CHAR(&NOTE) *CAT ')')
+             RUNSQL     SQL(&REQ) COMMIT(*NONE)
+
+ FIN:        ENDPGM
