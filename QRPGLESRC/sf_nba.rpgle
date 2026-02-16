@@ -271,7 +271,7 @@
      * Sécurité:
      *   - L'utilisateur doit confirmer avec F23 pour supprimer
      *   - Les champs sont affichés en mode protégé (*IN40)
-     *   - F23 est visible (N41 dans le DDS) et F22 est masqué (42 avec DSPATR(ND))
+     *   - F23 est rendue visible et F22 est masquée (voir fichier d'affichage)
      *******************************************************************************
      c     trt_del       begsr
      
