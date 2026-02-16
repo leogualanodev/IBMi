@@ -1,8 +1,8 @@
      *******************************************************************************
      * Programme     : SF_NBA.RPGLE
      * Description   : Gestion des joueurs NBA avec sous-fichier (Subfile)
-     * Auteur        : 
-     * Date création : 
+     * Auteur        : [À compléter]
+     * Date création : [À compléter]
      *
      * Fonctionnalités principales:
      *   - Affichage de la liste des joueurs NBA dans un sous-fichier
@@ -278,9 +278,9 @@
      * Activation des indicateurs pour le mode suppression
      * *IN40 = Zones protégées (non modifiables)
      c                   seton                                            40
-     * *IN41 = Affichage de F23 (suppression)
+     * *IN41 = Affichage de F23 (suppression) - rend visible le bouton F23
      c                   seton                                            41
-     * *IN42 = Affichage de F22 (masqué car redondant avec F23)
+     * *IN42 = Contrôle affichage F22 - activé pour masquer F22 en mode suppression
      c                   seton                                            42
      
      * Affichage des détails du joueur à supprimer
